@@ -4,7 +4,8 @@ namespace Console_Blank_6
 {
     internal class Program
     {
-        static void Main(string[] args)
+
+        static void Question1()
         {
             int number;
             Console.Write("enter an integer: ");
@@ -23,7 +24,7 @@ namespace Console_Blank_6
             while (count != number)
             {
                 count++;
-                if (count %10 == 0)
+                if (count % 10 == 0)
                 {
                     Console.Write("X");
                 }
@@ -36,6 +37,37 @@ namespace Console_Blank_6
                     Console.Write("/");
                 }
             }
+        }
+
+        static void Question2()
+        {
+            Console.WriteLine("enter and integer greater than 1: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int x = 2;
+            int count = 0;
+            while (number > 1)
+            {
+                bool multi = false;
+                while(number % x == 0)
+                {
+                    if (!multi)
+                    {
+                        Console.WriteLine(x);
+                    }
+                    count++;
+                    multi = true;
+                    number = number / x;
+
+                }
+                x++;
+            }
+            Console.WriteLine(count);
+        }
+
+        static void Main(string[] args)
+        {
+            //Question1();
+            //Question2();
         }
     }
 }
