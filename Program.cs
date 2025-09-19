@@ -64,10 +64,16 @@ namespace Console_Blank_6
             Console.WriteLine(count);
         }
 
+        static void Question3()
+        {
+            Console.WriteLine("")
+        }
+
         static void Main(string[] args)
         {
             //Question1();
             //Question2();
+            Question3();
         }
     }
 }
