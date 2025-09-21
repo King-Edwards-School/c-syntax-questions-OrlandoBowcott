@@ -141,6 +141,29 @@ namespace Console_Blank_6
 
         public static void Question6()
         {
+            int C = 0;
+            int D = 0;
+            int S = 0;
+            int T = 0;
+            Random rnd = new Random();
+
+            while (C < 3 && D < 3)
+            {
+                T = T + 1;
+
+                int N1 = rnd.Next(1, 7);
+                int N2 = rnd.Next(1, 7);
+                Console.WriteLine(N1 + ", " + N2);
+
+                S = S + N1 + N2;
+                if (N1 == 6 || N2 == 6)
+                    C = C + 1;
+                if (N1 == N2)
+                    D = D + 1;
+            }
+
+            int A = S / (T * 2);
+            Console.WriteLine(C + ", " + D + ", " + A);
 
         }
         static void Main(string[] args)
@@ -150,6 +173,7 @@ namespace Console_Blank_6
             //Question3();
             //Question4();
             //Question5();
+            //Question6();
         }
     }
 }
