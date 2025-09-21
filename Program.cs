@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Design;
+﻿using System.Collections.Concurrent;
+using System.ComponentModel.Design;
 
 namespace Console_Blank_6
 {
@@ -66,7 +67,28 @@ namespace Console_Blank_6
 
         static void Question3()
         {
-            Console.WriteLine("")
+            Console.WriteLine("enter an integer greater than 1: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            int product = 1;
+            int factor = 0;
+            while (product < x)
+            {
+                factor++;
+                product = product * factor;
+            }
+            if (product == x)
+            {
+                product = 1;
+                for (int n = 1; n <= factor; n++)
+                {
+                    product = product * n;
+                    Console.WriteLine(n);
+                }
+            }
+            else
+            {                
+                Console.WriteLine("No results");
+            }
         }
 
         static void Main(string[] args)
