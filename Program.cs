@@ -117,13 +117,39 @@ namespace Console_Blank_6
 
         }
 
-        
+        static void Question5()
+        {
+            Console.Write("Enter a positive whole number: ");
+            int NumberIn = int.Parse(Console.ReadLine());
+
+            int NumberOut = 0;
+            int Count = 0;
+            while (NumberIn > 0)
+            {
+                Count = Count + 1;
+                int PartValue = NumberIn % 2;
+                NumberIn = NumberIn / 2;
+                for (int i = 1; i <= Count - 1; i++)
+                {
+                    PartValue = PartValue * 10;
+                }
+                NumberOut = NumberOut + PartValue;
+            }
+            Console.WriteLine("The result is: " + NumberOut);
+
+        }
+
+        public static void Question6()
+        {
+
+        }
         static void Main(string[] args)
         {
             //Question1();
             //Question2();
             //Question3();
             //Question4();
+            //Question5();
         }
     }
 }
