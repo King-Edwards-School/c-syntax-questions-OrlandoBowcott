@@ -91,11 +91,39 @@ namespace Console_Blank_6
             }
         }
 
+        static void Question4()
+        {
+            Console.Write("Enter integer (0-99): ");
+            int value = int.Parse(Console.ReadLine());
+
+            Console.Write("Calculate additive or multiplicative persistence (a/m)? ");
+            char operation = Console.ReadLine()[0];
+
+            int count = 0;
+            while (value > 9)
+            {
+                if (operation == 'a')
+                {
+                    value = (value / 10) + (value % 10);
+                }
+                else if (operation == 'm')
+                {
+                    value = (value / 10) * (value % 10);
+                }
+                count++;
+            }
+
+            Console.WriteLine("The persistence is: " + count);
+
+        }
+
+        
         static void Main(string[] args)
         {
             //Question1();
             //Question2();
-            Question3();
+            //Question3();
+            //Question4();
         }
     }
 }
